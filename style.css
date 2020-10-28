@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color:rgb(175, 253, 244);
+    --bg-center-color: rgb(223, 255, 251);
+
+    --calc-bg-color:  rgb(175, 253, 244);
+    --calc-text-color: rgb(0,0,0);
+
+    --display-bg-color:#000;
+    --display-color: rgb(129, 248, 236);
+
+    --shadow-1-color: rgba(0,0,0,0.30);
+    --shadow-2-color:  rgba(0,0,0,0.22);
+
+    --heading-color: #000;
+
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+    /* background-color:  rgb(175, 253, 244); */
+    background: linear-gradient(
+        to right, 
+        var(--bg-color),  
+        var(--bg-center-color),
+        var(--bg-color)) ;
+    /* border: 5px solid slateblue; */
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.2fr repeat(5,1fr);
+
+    height: 30rem;
+    width: 20rem;
+    margin: 1rem;
+
+    /* border: slateblue 1px solid; */
+    border-radius: 15px;
+    box-shadow: 0 19px 38px var(--shadow-1-color), 
+    0 15px 12px var(--shadow-2-color);
+}
+
+#display {
+    grid-column: 1/5;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    text-align: right;
+    padding: 1rem;
+    font-size: 30px;
+    
+    background-color: var(--display-bg-color);
+    color: var(--display-color);
+    border: none;
+
+    cursor: unset;
+    outline: none;
+}
+
+.bottom-left{
+    border-bottom-left-radius: 15px;
+    grid-column: 1/3;
+}
+
+.bottom-right{
+    border-bottom-right-radius: 15px;
+}
+
+.btn {
+    font-size: 1.5rem;
+    background-color:var(--calc-bg-color);
+    color: var(--calc-text-color);
+    border: none;
+    outline: none;
+
+    font-weight: lighter;
+}
+
+.btn:hover{
+    outline: none;
+}
+
+.btn:active {
+    background-color: var(--bg-center-color);
+    /* color: var(--calc-bg-color); */
+}
+
+.theme-btns {
+    margin: 4rem;
+}
+
+.theme-btn {
+    padding: .6rem 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color:var(--display-bg-color);
+    color: var(--display-color);
+    box-shadow: 0 10px 19px var(--shadow-1-color), 
+    0 8px 6px var(--shadow-2-color);
+}
+
+@media screen and (min-width: 1000px){
+    .theme-btns {
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        margin-top: -25rem;
+        margin-right: -1rem;
+    }
+
+    .theme-btn {
+        margin: .5rem;
+    }
+}

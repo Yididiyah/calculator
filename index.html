@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <input readonly type="text" name="display" id="display" value="">
+
+            <button value="AC" class="btn all-reset">AC</button>
+            <button value="+/-" class="btn invert-sign-operator">+/-</button>
+            <button value="%" class="btn operator">%</button>
+            <button value="/" class="btn operator">/</button>
+            
+            <button value="7" class="btn operand">7</button>
+            <button value="8" class="btn operand">8</button>
+            <button value="9" class="btn operand">9</button>
+            <button value="*" class="btn operator">*</button>
+
+            <button value="4" class="btn operand">4</button>
+            <button value="5" class="btn operand">5</button>
+            <button value="6" class="btn operand">6</button>
+            <button value="+" class="btn operator">+</button>
+
+            <button value="1" class="btn operand">1</button>
+            <button value="2" class="btn operand">2</button>
+            <button value="3" class="btn operand">3</button>
+            <button value="-" class="btn operator">-</button>
+
+            <!-- <button value="C" class="btn bottom-left reset">C</button> -->
+            <button value="0" class="btn bottom-left operand">0</button>
+            <button value="." value="1" class="btn dot">.</button>
+            <button value="=" class="btn bottom-right equals">=</button>
+
+        </div>
+        <div class="theme-btns">
+            <button value="dark" class="theme-btn dark">Dark</button>
+            <button value="default" class="theme-btn default">Default</button>
+            <button value="silver" class="theme-btn silver">Silver</button>
+            <button value="pink" class="theme-btn Pink">Pink</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
